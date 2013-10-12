@@ -5,11 +5,10 @@ class Chopper
     return -1 if target < values[0] || target > values[-1]
     return 0 if values.size == 1
 
-    if chop(target, values.reduce(target)) == -1
-      return -1
-    else 
-      return values.reduce_index(target) + chop(target, values.reduce(target))
-    end
+    chop_reduced = chop(target, values.reduce(target))
+    index_reduced = values.reduce_index(target)
+
+    return chop_reduced == -1 ? -1 : index_reduced + chop_reduced
   end
 
 private
