@@ -22,7 +22,9 @@ private
     end
 
     def reduce(target)
-      target <= median.value ? slice(0..median.index) : slice(median.index + 1..-1)
+      target <= median.value ? 
+        slice(0..median.index) : 
+        slice(median.index + 1..-1)
     end
 
     def reduce_index(target)
