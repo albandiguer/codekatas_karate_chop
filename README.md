@@ -1,7 +1,6 @@
 To execute the test suite, please type
 
-bundle
-guard
+bundle && guard
 
 You should obtain a similar output: 
 
